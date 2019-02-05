@@ -5,6 +5,7 @@ NET "CLK" LOC = P56;
 # Switches
 NET "switch_up" LOC = "P137" | PULLDOWN;
 NET "switch_clear" LOC = "P139" | PULLDOWN;
+NET "switch_stop" LOC = "P140" | PULLDOWN;
 
 # 7-segments
 NET "SEG[7]" LOC = P1;

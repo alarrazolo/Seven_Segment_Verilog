@@ -1,0 +1,59 @@
+# User Constraint File for 7-seg counter on Mojo with IO Shield
+
+NET "CLK" LOC = P56; 
+
+# Switches
+NET "switch_up" LOC = "P137" | PULLDOWN;
+NET "switch_clear" LOC = "P139" | PULLDOWN;
+
+# 7-segments
+NET "SEG[7]" LOC = P1;
+NET "SEG[6]" LOC = P6;
+NET "SEG[5]" LOC = P2;
+NET "SEG[4]" LOC = P143;
+NET "SEG[3]" LOC = P144;
+NET "SEG[2]" LOC = P8;
+NET "SEG[1]" LOC = P5;
+NET "SEG[0]" LOC = P141;
+
+# Digits 
+NET "DIGIT[3]" LOC = P12;
+NET "DIGIT[2]" LOC = P7;
+NET "DIGIT[1]" LOC = P10;
+NET "DIGIT[0]" LOC = P9;
+
+#LEDs
+
+NET "io_led[0]"  LOC = P97;
+NET "io_led[1]"  LOC = P98;
+NET "io_led[2]" LOC = P94;
+NET "io_led[3]" LOC = P95;
+NET "io_led[4]" LOC = P92;
+NET "io_led[5]" LOC = P93;
+NET "io_led[6]" LOC = P87;
+NET "io_led[7]" LOC = P88;
+
+NET "io_led[8]" LOC = P84;
+NET "io_led[9]" LOC = P85;
+NET "io_led[10]" LOC = P82;
+NET "io_led[11]" LOC = P83;
+NET "io_led[12]" LOC = P80;
+NET "io_led[13]" LOC = P81;
+NET "io_led[14]" LOC = P11;
+NET "io_led[15]" LOC = P14;
+
+NET "io_led[16]" LOC = P15;
+NET "io_led[17]" LOC = P16;
+NET "io_led[18]" LOC = P17;
+NET "io_led[19]" LOC = P21;
+NET "io_led[20]" LOC = P22;
+NET "io_led[21]" LOC = P23;
+NET "io_led[22]" LOC = P24;
+NET "io_led[23]" LOC = P26;
+
+
+
+
+
+
+

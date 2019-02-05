@@ -70,7 +70,7 @@ begin
 	if (prescaler == 24'd50000000) // 1 Hz
 	begin
 	prescaler <= 0;
-		if(!stopped)
+		if(stopped)
 			begin
 			if(!direction)
 			begin

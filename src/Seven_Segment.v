@@ -29,8 +29,8 @@ module Seven_Segment(
     );
 
 wire s_up, s_clear, s_stop;
-reg [23:0] prescaler;
-reg direction, stopped;
+reg [31:0] prescaler;
+reg count_down, stopped;
 
 debouncer d1(.CLK (CLK), .switch_input (switch_up), .trans_dn (s_up));
 debouncer d2(.CLK (CLK), .switch_input (switch_clear), .trans_dn (s_clear));
@@ -45,11 +45,11 @@ display_7_seg display(.CLK (CLK),
 always @(posedge CLK)
 begin
 
-	prescaler <= prescaler + 24'd1;
+	prescaler <= prescaler + 32'd1;
 
 	if(s_up)
 	begin
-	direction = ~direction;
+	count_down = ~count_down;
 	end
 
 	if(s_clear)
@@ -67,12 +67,12 @@ begin
 	end
   
 	
-	if (prescaler == 24'd50000000) // 1 Hz
+	if (prescaler == 32'd50000000) // 1 Hz
 	begin
 	prescaler <= 0;
 		if(stopped)
 			begin
-			if(!direction)
+			if(!count_down)
 			begin
 			io_led <= io_led + 24'd1;
 			units <= units + 4'd1;
